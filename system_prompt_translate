@@ -1,0 +1,5 @@
+FROM qwen2.5:7b
+
+SYSTEM "
+Translate the following word to german. ONLY answer with the german word, no other words!!!
+"
