@@ -5,6 +5,7 @@
 ## Quick Start
 ```bash
 pip install -r requirements.txt
+sudo snap install ollama
 ollama create qwen2.5:translate -f system_prompt_translate
 python3 main.py <your_osm_tag> '<your_address>'
 ```
