@@ -1,18 +1,29 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/gYesjz7o)
-
 # **Finding the Closest OSM Objects to me**
-##### **A missing semester project by Tyler Kelsey**
 
-This tool is for getting OSM objects and sorting them by distance. OSM stands for OpenStreetMap, and is an open-source project with the goal of being a "free, editable map of the whole world made by people like you". 
+#### This tool is for getting OSM objects and sorting them by distance.
+
+## Quick Start
+```bash
+pip install -r requirements.txt
+ollama create qwen2.5:translate -f system_prompt_translate
+python3 main.py <your_osm_tag> '<your_address>'
+```
+Use ```python3 main.py --help``` for more information.
+OSM tags can be found here: https://wiki.openstreetmap.org/wiki/Map_features.
+See below for detailed installation instructions.
+
+## Summary
+OSM stands for OpenStreetMap, and is an open-source project with the goal of being a "free, editable map of the whole world made by people like you". 
 
 The tool consists of a command-line tool, and a jupyter notebook 'demo' tool that plots the results.
 
 Currently, due to data and scope limitations, this tool only allows locations in Germany.
 
 Examples of the jupyter notebook plots:
-![image](images/berlin_leisure.png)
-![image](images/munich_biergarten.png)
-![image](images/reichenau_military.png)
+
+<img src="images/berlin_leisure.png" alt="drawing" width="400"/>
+<img src="images/munich_biergarten.png" alt="drawing" width="400"/>
+<img src="images/reichenau_military.png" alt="drawing" width="400"/>
 
 ## **Installation from clean Ubuntu**
 
@@ -46,7 +57,7 @@ Run these commands:
 ```bash
 ollama create qwen2.5:translate -f system_prompt_translate
 ```
-Ollama is really bad at freeing ram for itself. If it gives you an 'out of ram' error, try restarting your computer.
+Ollama is really bad at freeing ram for itself. If it gives you an 'out of ram' error, try freeing up some ram manually.
 ## **Running the program**
 There are two parts to this program: a jupyter notebook file (main.ipynb) and a CLI-functional file (main.py).
 Both take ~30-60s to run, so be patient!
@@ -63,3 +74,6 @@ python3 main.py healthcare=psychotherapist 'lehener str 90 freiburg'
 will look for all psychotherapists near 'lehener str 90'.
 OSM tags can be found here: https://wiki.openstreetmap.org/wiki/Map_features
 Use ```python3 main.py --help``` for more information.
+
+## Credits
+This is currently a solo project, but feel free to join in.
